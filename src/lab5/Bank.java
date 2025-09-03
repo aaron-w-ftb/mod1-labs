@@ -87,7 +87,7 @@ public class Bank {
         System.out.println("\nTest 3: Searching for existing customer;");
         Account foundAccount = myBank.getAccount("Jane Doe");
         if (foundAccount != null) {
-            System.out.println("✓ Successfully found account:");
+            System.out.println("Successfully found account:");
             System.out.println(foundAccount.getDetails());
         }
 
