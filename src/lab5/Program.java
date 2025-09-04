@@ -51,20 +51,20 @@ public class Program {
         Account partnerAccount = myTestAccount;
         
         System.out.println("Created partnerAccount = myTestAccount");
-        System.out.println("partnerAccount balance before addInterest(): $" + partnerAccount.getBalance());
+        System.out.println("partnerAccount balance before addInterest(): £" + partnerAccount.getBalance());
         
         partnerAccount.addInterest();
         
-        System.out.println("myTestAccount balance after partnerAccount.addInterest(): $" + myTestAccount.getBalance());
+        System.out.println("myTestAccount balance after partnerAccount.addInterest(): £" + myTestAccount.getBalance());
         System.out.println("Did the balance change? Yes -- both variables reference the same object.");
         System.out.println();
 
         System.out.println("Testing static processAccount method:");
-        System.out.println("myTestAccount balance before processAccount(): $" + myTestAccount.getBalance());
+        System.out.println("myTestAccount balance before processAccount(): £" + myTestAccount.getBalance());
         
         processAccount(myTestAccount);
         
-        System.out.println("myTestAccount balance after processAccount(): $" + myTestAccount.getBalance());
+        System.out.println("myTestAccount balance after processAccount(): £" + myTestAccount.getBalance());
         System.out.println("Did the balance change? Yes -- reference types are modified directly.");
         System.out.println();
         
@@ -90,11 +90,11 @@ public class Program {
     
     public static void processAccount(Account acc) {
         System.out.println("Inside processAccount method:");
-        System.out.println("Account balance before interest: $" + acc.getBalance());
+        System.out.println("Account balance before interest: £" + acc.getBalance());
         
         acc.addInterest();
         
-        System.out.println("Account balance after interest: $" + acc.getBalance());
+        System.out.println("Account balance after interest: £" + acc.getBalance());
     }
     private static void incInt(int x) {
         System.out.println("Inside incInt method, x = " + x);

@@ -15,7 +15,7 @@ public class Account {
             return;
         }
         this.balance += amount;
-        System.out.println("Deposited $" + amount + ". New balance: $" + this.balance);
+        System.out.println("Deposited £" + amount + ". New balance: £" + this.balance);
     }
 
     public void withdraw(double amount) {
@@ -25,19 +25,19 @@ public class Account {
         }
 
         if (amount > this.balance) {
-            System.out.println("Error: Cannot withdraw money you don't have.(3) Current balance: $" + this.balance);
+            System.out.println("Error: Cannot withdraw money you don't have.(3) Current balance: £" + this.balance);
             return;
         }
 
         this.balance -= amount;
-        System.out.println("Withdrew $" + amount + ". New balance: $" + this.balance);
+        System.out.println("Withdrew £" + amount + ". New balance: £" + this.balance);
     }
 
     public String getDetails() {
         return String.format("Account Details:\n" +
                            "ID: %d\n" +
                            "Owner: %s\n" +
-                           "Balance: $%.2f", 
+                           "Balance: £%.2f", 
                            this.id, this.owner, this.balance);
     }
 
@@ -45,8 +45,8 @@ public class Account {
         double interestRate = 0.025;
         double interestAmount = this.balance * interestRate;
         this.balance += interestAmount;
-        System.out.println("Interest added: $" + String.format("%.2f", interestAmount) + 
-                          ". New balance: $" + String.format("%.2f", this.balance));
+        System.out.println("Interest added: £" + String.format("%.2f", interestAmount) + 
+                          ". New balance: £" + String.format("%.2f", this.balance));
     }
 
     public int getId() {
